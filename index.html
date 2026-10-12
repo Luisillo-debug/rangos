@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rangos Militares del Ejército de Bolivia - Jerarquía y Grados</title>
+  <meta name="description" content="Página educativa sobre los rangos, grados y jerarquía militar del Ejército de Bolivia, organizados de menor a mayor jerarquía según la Ley Orgánica de las Fuerzas Armadas.">
+  <script type="module" crossorigin src="/assets/index-C28iW1ox.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DfLHq_6C.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ENCABEZADO INSTITUCIONAL - EJÉRCITO DE BOLIVIA
+       ========================================================================== -->
+  <header class="header-institutional">
+    <div class="header-inner">
+      <div class="institutional-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        <span>Ejército del Estado Plurinacional de Bolivia</span>
+      </div>
+
+      <h1 class="header-title">
+        RANGOS MILITARES DEL <span class="dorado">EJÉRCITO DE BOLIVIA</span>
+      </h1>
+      <p class="header-subtitle">Jerarquía y grados de la Fuerza Terrestre</p>
+
+      <div class="header-intro-box">
+        <p>
+          El <strong>Ejército de Bolivia</strong> es el componente terrestre de las Fuerzas Armadas encargado de la defensa de la soberanía, integridad territorial y seguridad de la patria. Su estructura jerárquica está regulada por la <strong>Constitución Política del Estado</strong> y la <strong>Ley Orgánica de las Fuerzas Armadas (LOFA, Ley Nº 1405)</strong>, organizándose de forma vertical y ascendente desde los soldados conscriptos de tropa hasta el General de Ejército.
+        </p>
+      </div>
+
+      <div class="quick-stats-row">
+        <div class="stat-chip">
+          Fuerza: <strong>Ejército de Bolivia</strong>
+        </div>
+        <div class="stat-chip">
+          Lema: <strong>Patria, Honor y Disciplina</strong>
+        </div>
+        <div class="stat-chip">
+          <strong>6</strong> Grupos Jerárquicos
+        </div>
+        <div class="stat-chip">
+          <strong>20</strong> Grados Oficiales (Menor a Mayor)
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       CONTENIDO PRINCIPAL
+       ========================================================================== -->
+  <main class="site-wrapper">
+
+    <!-- ==========================================================================
+         SECCIÓN: VIDEO INFORMATIVO
+         ========================================================================== -->
+    <section class="video-section" id="video-section" aria-labelledby="video-title">
+      <div class="video-card">
+        <div class="video-header">
+          <div class="video-header-left">
+            <svg class="video-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+            <h2 id="video-title" class="video-title">VIDEO INFORMATIVO</h2>
+          </div>
+          <button type="button" id="toggle-video-input-btn" class="video-config-toggle-btn" title="Configurar o cambiar video">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+            <span>Cambiar Video</span>
+          </button>
+        </div>
+
+        <!-- Panel interactivo para cambiar el video fácilmente -->
+        <div id="video-config-panel" class="video-config-panel hidden">
+          <div class="config-panel-row">
+            <div class="config-input-wrap">
+              <label for="video-url-input" class="config-label">Enlace de YouTube o ruta de archivo .MP4:</label>
+              <input type="text" id="video-url-input" class="config-input" placeholder="Ejemplo: https://www.youtube.com/watch?v=... o video.mp4">
+            </div>
+            <div class="config-buttons-wrap">
+              <button type="button" id="apply-video-btn" class="config-btn-apply">Cargar Video</button>
+              <button type="button" id="reset-video-btn" class="config-btn-reset">Restablecer</button>
+            </div>
+          </div>
+          <p class="config-help-text">
+            Nota: Puedes configurar el video de forma permanente editando el archivo <code>src/videoConfig.js</code>.
+          </p>
+        </div>
+
+        <!-- Reproductor de video centrado con proporción 16:9 adaptable -->
+        <div class="video-frame-container">
+          <div id="video-player-container" class="video-aspect-16-9">
+            <!-- Renderizado dinámico desde videoConfig.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel de Filtros y Búsqueda -->
+    <nav class="controls-panel" aria-label="Filtros y Búsqueda del Ejército">
+      <div class="subcontrols-bar">
+        <div class="filter-group-wrap">
+          <label for="category-filter" class="filter-label">Filtrar por Grupo:</label>
+          <select id="category-filter" class="category-filter-select">
+            <option value="todas">Todos los Grupos (20 Grados)</option>
+            <option value="tropa">Tropa (Servicio Militar)</option>
+            <option value="sargentos">Sargentos</option>
+            <option value="suboficiales">Suboficiales</option>
+            <option value="oficiales-subalternos">Oficiales Subalternos</option>
+            <option value="oficiales-superiores">Oficiales Superiores</option>
+            <option value="oficiales-generales">Oficiales Generales</option>
+          </select>
+        </div>
+
+        <div class="search-box">
+          <svg class="search-icon-svg" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-rank" class="search-input" placeholder="Buscar grado o función en el Ejército..." aria-label="Buscar grado militar del Ejército">
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner informativo del Ejército -->
+    <div id="force-banner-container"></div>
+
+    <!-- Contenedor dinámico de los grados del Ejército (menor a mayor jerarquía) -->
+    <div id="ranks-main-container" class="ranks-main-container"></div>
+
+    <!-- ==========================================================================
+         SECCIÓN FINAL: CONCLUSIÓN EDUCATIVA E INSTITUCIONAL
+         ========================================================================== -->
+    <section class="conclusion-section">
+      <h3 class="conclusion-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>¿Por qué existe la jerarquía militar en el Ejército y cuál es su importancia?</span>
+      </h3>
+
+      <p class="conclusion-intro">
+        En el Ejército de Bolivia, la jerarquía es la columna vertebral que garantiza la efectividad de las operaciones en el terreno, la disciplina en los cuarteles y la custodia del territorio patrio. No se trata únicamente de insignias o títulos, sino de una articulación clara de responsabilidades:
+      </p>
+
+      <div class="conclusion-pillars">
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <svg class="pillar-icon" viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            <h4 class="pillar-title">Unidad de Mando y Mando Vertical</h4>
+          </div>
+          <p class="pillar-desc">
+            Cada unidad del Ejército (desde una escuadra de 10 fusileros hasta un regimiento o división) cuenta con un comandante claramente identificado. Esto erradica órdenes contradictorias y asegura una respuesta inmediata y coordinada en el campo.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <svg class="pillar-icon" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            <h4 class="pillar-title">Distribución de Responsabilidades</h4>
+          </div>
+          <p class="pillar-desc">
+            A mayor grado militar, mayor es la responsabilidad sobre vidas humanas, armamento, material de guerra y decisiones estratégicas. Mientras la tropa ejecuta las misiones tácticas, los oficiales superiores y generales responden por la planificación y los resultados globales.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <svg class="pillar-icon" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            <h4 class="pillar-title">Disciplina y Espíritu de Cuerpo</h4>
+          </div>
+          <p class="pillar-desc">
+            La subordinación legal y el respeto mutuo entre superiores y subalternos cimentan la cohesión indispensable para que las fuerzas terrestres actúen en apoyo a desastres, seguridad de fronteras y defensa del Estado.
+          </p>
+        </div>
+      </div>
+
+      <div class="legal-footnote">
+        <strong>Base Jurídica Institucional:</strong> De acuerdo con el Artículo 245 de la Constitución Política del Estado y los Artículos 9 al 24 de la Ley Orgánica de las Fuerzas Armadas (Ley Nº 1405), el orden jerárquico del Ejército se determina por el grado, la antigüedad y el cargo desempeñado, regulando la carrera y ascensos por méritos calificados.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       PIE DE PÁGINA
+       ========================================================================== -->
+  <footer class="footer-institutional">
+    <div class="footer-inner">
+      <p><strong>Guía Educativa de Rangos Militares — Ejército de Bolivia</strong></p>
+      <p class="footer-gold">"Patria, Honor y Disciplina"</p>
+      <p style="opacity: 0.75; font-size: 0.8rem; margin-top: 6px;">
+        Material educativo elaborado según la estructura de la Ley Orgánica de las Fuerzas Armadas (Ley 1405).
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
